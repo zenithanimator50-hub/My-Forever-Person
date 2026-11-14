@@ -1,7 +1,7 @@
 
 /* =================================
    MY FOREVER PERSON
-   Main Website Styles
+   Dreamy Pastel Design System
 ================================= */
 
 :root {
@@ -12,6 +12,8 @@
   --mint: #d9f3e9;
   --text: #51445f;
   --muted: #82758e;
+  --pink-glow: rgba(255, 190, 220, 0.45);
+  --purple-glow: rgba(190, 165, 245, 0.35);
 }
 
 * {
@@ -46,6 +48,33 @@ button {
 #app {
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
+}
+
+/* Magical Background */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(75px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  top: -100px;
+  left: -100px;
+  background: var(--pink-glow);
+}
+
+body::after {
+  right: -100px;
+  bottom: -100px;
+  background: var(--purple-glow);
 }
 
 /* Loading Screen */
@@ -65,28 +94,46 @@ button {
     #e9ddfb,
     #fff8ee
   );
+  transition:
+    opacity 0.9s ease,
+    visibility 0.9s ease;
 }
 
 .loading-content {
+  position: relative;
+  z-index: 1;
   animation: softAppear 1.5s ease both;
 }
 
 .loading-butterfly {
-  font-size: 55px;
-  margin-bottom: 20px;
-  animation: butterflyFloat 2s ease-in-out infinite;
+  font-size: 58px;
+  margin-bottom: 22px;
+  display: inline-block;
+  animation: butterflyFloat 2.5s ease-in-out infinite;
+  filter: drop-shadow(0 8px 15px rgba(180, 130, 190, 0.2));
 }
 
 .loading-content h1 {
-  font-size: clamp(25px, 7vw, 38px);
-  margin-bottom: 12px;
+  font-size: clamp(26px, 7vw, 39px);
   font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 13px;
+  color: #665174;
+  text-shadow: 0 3px 15px rgba(255, 255, 255, 0.8);
 }
 
 .loading-content p {
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+.loading-stars {
+  margin-top: 22px;
+  font-size: 19px;
+  color: #c49bd9;
+  animation: starGlow 2s ease-in-out infinite;
 }
 
 /* Main Website */
@@ -95,15 +142,17 @@ button {
   min-height: 100vh;
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 
-/* Basic Animations */
+/* Animation Collection */
 
 @keyframes softAppear {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(18px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -112,10 +161,23 @@ button {
 
 @keyframes butterflyFloat {
   0%, 100% {
-    transform: translateY(0) rotate(-5deg);
+    transform: translateY(0) rotate(-6deg);
   }
+
   50% {
-    transform: translateY(-12px) rotate(5deg);
+    transform: translateY(-14px) rotate(6deg);
+  }
+}
+
+@keyframes starGlow {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
   }
 }
 
@@ -130,4 +192,4 @@ button {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
+       }
