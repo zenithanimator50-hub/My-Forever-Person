@@ -10,6 +10,7 @@
 
   <title>My Forever Person ♡</title>
 
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -17,17 +18,31 @@
 <body>
 
   <div id="app">
+
+    <!-- Magical Loading Screen -->
     <div id="loading-screen">
       <div class="loading-content">
+
         <div class="loading-butterfly">🦋</div>
+
         <h1>My Forever Person</h1>
+
         <p>Preparing a little surprise for you...</p>
+
+        <div class="loading-stars">
+          ✨ &nbsp; ♡ &nbsp; ✨
+        </div>
+
       </div>
     </div>
 
+    <!-- Main Website -->
     <main id="website-content">
-      <!-- Our little universe will be created here -->
+
+      <!-- Our little universe will appear here -->
+
     </main>
+
   </div>
 
 </body>
