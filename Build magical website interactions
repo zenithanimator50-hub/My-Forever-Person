@@ -1,12 +1,12 @@
 
 /* =================================
    MY FOREVER PERSON
-   Website JavaScript Foundation
+   Magical Website Foundation
 ================================= */
 
 "use strict";
 
-/* Website settings */
+/* Website Settings */
 
 const WEBSITE_CONFIG = {
   title: "My Forever Person",
@@ -17,7 +17,7 @@ const WEBSITE_CONFIG = {
   musicStartsAutomatically: false
 };
 
-/* Helpful DOM functions */
+/* DOM Selection Helpers */
 
 const $ = (selector, parent = document) =>
   parent.querySelector(selector);
@@ -25,18 +25,18 @@ const $ = (selector, parent = document) =>
 const $$ = (selector, parent = document) =>
   [...parent.querySelectorAll(selector)];
 
-/* Accessibility settings */
+/* Accessibility Settings */
 
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
-/* Small delay helper */
+/* Delay Helper */
 
 const wait = (milliseconds) =>
   new Promise(resolve => setTimeout(resolve, milliseconds));
 
-/* Safe text helper */
+/* Safe Text Helper */
 
 function setText(element, text) {
   if (element) {
@@ -44,7 +44,7 @@ function setText(element, text) {
   }
 }
 
-/* Animation helper */
+/* Animation Helper */
 
 function animateElement(element, animationName, duration = 700) {
   if (!element || prefersReducedMotion) return;
@@ -57,7 +57,22 @@ function animateElement(element, animationName, duration = 700) {
   });
 }
 
-/* Website foundation */
+/* Loading Screen Controller */
+
+async function startLoadingScreen() {
+  const loadingScreen = $("#loading-screen");
+
+  if (!loadingScreen) return;
+
+  await wait(WEBSITE_CONFIG.loadingDuration);
+
+  loadingScreen.style.opacity = "0";
+  loadingScreen.style.visibility = "hidden";
+
+  loadingScreen.setAttribute("aria-hidden", "true");
+}
+
+/* Website Foundation */
 
 const PariUniverse = {
   config: WEBSITE_CONFIG,
@@ -66,13 +81,18 @@ const PariUniverse = {
   wait,
   setText,
   animateElement,
+  startLoadingScreen,
   prefersReducedMotion
 };
 
-/* Make foundation available to future sections */
+/* Make Foundation Available */
 
 window.PariUniverse = PariUniverse;
 
+/* Start Website */
+
 document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.classList.add("app-ready");
+
+  startLoadingScreen();
 });
