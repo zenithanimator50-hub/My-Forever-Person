@@ -26,7 +26,7 @@
     <h1>A Little Secret...</h1>
     <p>This little world has a secret entrance.</p>
     <input id="secret-input" type="password" placeholder="Enter the secret word">
-    <button onclick="unlockWebsite()">Unlock Our World ✨</button>
+    <button onclick="unlockSite()">Unlock Our World ✨</button>
     <p id="secret-message"></p>
   </div>
 </div>
