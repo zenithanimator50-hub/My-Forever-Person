@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Secret access
   window.unlockSite = function () {
     const passwordInput = document.getElementById("secret-input");
-    const errorMessage = document.getElementById("error-message");
+    const secretMessage = document.getElementById("error-message");
 
     if (!passwordInput) return;
 
