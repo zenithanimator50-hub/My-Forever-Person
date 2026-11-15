@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8e8f5">
+  <title>My Forever Person ♡</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loading-content">
+    <div class="butterfly">🦋</div>
+    <h1>My Forever Person</h1>
+    <p>Preparing a little surprise for you...</p>
+    <div>✨ ♡ ✨</div>
+  </div>
+</div>
+
+<div id="secret-screen" class="screen">
+  <div class="glass-card">
+    <div class="big-icon">💌</div>
+    <h1>A Little Secret...</h1>
+    <p>This little world has a secret entrance.</p>
+    <input id="secret-input" type="password" placeholder="Enter the secret word">
+    <button onclick="unlockWebsite()">Unlock Our World ✨</button>
+    <p id="secret-message"></p>
+  </div>
+</div>
+
+<div id="main-site" class="hidden">
+
+<header>
+  <div class="logo">NP ♡</div>
+  <button id="menu-button" onclick="toggleMenu()">☰</button>
+  <nav id="menu">
+    <a href="#home">Home</a>
+    <a href="#little-world">Our Little World</a>
+    <a href="#letters">Letters</a>
+    <a href="#moments">Little Moments</a>
+    <a href="#moon">One Moon</a>
+    <a href="#treasure">Secret Treasure</a>
+    <a href="#meeting">Our First Meeting</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="floating">🦋 ✨ 🌙</div>
+  <p class="eyebrow">A LITTLE UNIVERSE MADE JUST FOR YOU</p>
+  <h1>Welcome to Your Little Universe, Pari! 💗</h1>
+  <p>A place filled with little surprises, countless smiles and a bond that means so much.</p>
+  <div class="hero-buttons">
+    <a class="button" href="#little-world">💌 Explore Our Little World</a>
+    <a class="button secondary" href="#treasure">🎁 Discover Your Surprises</a>
+    <a class="button secondary" href="#letters">✨ A Little Something for You</a>
+  </div>
+  <div class="signature">NITIN ♡ PARI</div>
+  <p>Always... Forever... Together... ∞</p>
+</section>
+
+<section id="little-world">
+  <p class="eyebrow">OUR CONNECTION</p>
+  <h2>Our Little World 🌷</h2>
+
+  <article class="glass-card">
+    <h3>A Bond Beyond Labels 💗</h3>
+    <p>Kujh rishteyan nu kise naam ya label di lod nahi hundi. Oh apni jagah aap hi khaas hunde ne.</p>
+    <p>Saddi bonding vi kujh eddan di ae. Asi khoon de rishte naal nahi jude, par waqt, gallan, hasi-mazaak te ik duje di care ne sanu ik special connection ditta ae.</p>
+    <p>Mere layi tu sirf ik dost nahi, balki meri chosen family da oh hissa ae jisdi apni hi jagah ae.</p>
+    <p>Chahe sade raah kinne vi door hon, main hamesha saddi is bonding di kadar karanga.</p>
+    <strong>Some bonds don't need a name; they just need to be treasured. ♾️</strong>
+  </article>
+
+  <article class="glass-card">
+    <h3>The Little Things I Treasure ✨</h3>
+    <p>Mainu saddi har chhoti gall yaad rakhni changi lagdi ae.</p>
+    <p>Saddiyan random gallan, bina kise wajah de hassna, chhoti-chhoti nok-jhok, ik duje nu tang karna te oh moments jo shayad aam lagde ne, par mere layi khaas ne.</p>
+    <p>Kayi vaar vadde surprises ton zyada chhotiyaan gallan dil nu khush kar dindiyan ne.</p>
+    <p>Main nahi chaunda ki saddiyan eh little memories kade bhullan.</p>
+    <strong>It's always the little things that make the biggest memories. 🦋</strong>
+  </article>
+
+  <article class="glass-card">
+    <h3>Our Bandar - Bandariya Corner 🐒</h3>
+    <p>Eh corner sade uss funny te pagalpan naal bhare side layi ae, jithe Bandar te Bandariya di apni hi duniya chaldi ae. 😂</p>
+    <p>Kade teasing, kade nok-jhok, kade random gallan te kade bina kise reason de hasi.</p>
+    <p>Saddi eh masti hi is corner nu special banaundi ae.</p>
+    <p>Pari, eh jagah saddiyan funny memories te ohna chhotiyaan sharartaan layi ae jo sade chehre te smile le aundiyan ne.</p>
+    <strong>One Bandar, One Bandariya, and countless silly memories! 🐒💗</strong>
+  </article>
+</section>
+
+<section id="letters">
+  <p class="eyebrow">WORDS FROM THE HEART</p>
+  <h2>The Secret Library of Feelings 💌</h2>
+  <div class="card-grid">
+    <article class="glass-card"><h3>A Letter From My Heart</h3><p>💌</p></article>
+    <article class="glass-card"><h3>Things I Wish You Knew</h3><p>📖</p></article>
+    <article class="glass-card"><h3>You Make Life Brighter</h3><p>🌷</p></article>
+    <article class="glass-card"><h3>Whenever You Need a Smile</h3><p>🦋</p></article>
+    <article class="glass-card"><h3>A Story Still Being Written</h3><p>✨</p></article>
+  </div>
+</section>
+
+<section id="moments">
+  <p class="eyebrow">LITTLE JOYS</p>
+  <h2>A Universe of Little Joys 🌸</h2>
+  <div class="card-grid">
+    <article class="glass-card"><h3>Giggle Corner 😂</h3></article>
+    <article class="glass-card"><h3>Smile Therapy 💗</h3></article>
+    <article class="glass-card"><h3>A Little Appreciation 🌷</h3></article>
+    <article class="glass-card"><h3>Just Because 🦋</h3></article>
+  </div>
+</section>
+
+<section id="moon">
+  <p class="eyebrow">CONNECTED IN OUR OWN WAY</p>
+  <h2>One Moon, One Special Connection 🌙</h2>
+  <div class="moon-scene">
+    <div>⭐</div>
+    <div class="connection">〰️ ✨ 〰️</div>
+    <div>🌙</div>
+  </div>
+  <p>My Little Star ⭐ &nbsp; — &nbsp; Pari's Moon 🌙</p>
+  <h3>In a sky full of stars, you will always be my moon, Pari. 🌙</h3>
+</section>
+
+<section id="treasure">
+  <p class="eyebrow">A LITTLE MAGIC</p>
+  <h2>Hidden Treasure Chamber 🎁</h2>
+  <div class="card-grid">
+    <article class="glass-card"><h3>A Secret to Unlock 🔐</h3></article>
+    <article class="glass-card"><h3>The Hidden Gift 🎀</h3></article>
+    <article class="glass-card"><h3>A Message Just for You 💌</h3></article>
+    <article class="glass-card"><h3>One Last Surprise ✨</h3></article>
+  </div>
+</
